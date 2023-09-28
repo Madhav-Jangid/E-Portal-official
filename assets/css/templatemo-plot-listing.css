@@ -667,7 +667,7 @@ header
     font-size: 12px;
     font-weight: 400;
   }
-  
+
   .header-area .main-nav .nav li #chat-portal{
     display: block;
   }
@@ -687,6 +687,7 @@ header
   .header-area .main-nav .nav li.submenu:hover ul, .header-area .main-nav .nav li.submenu:focus ul {
     height: 0px;
   }
+
 }
 
 #chat-portal{

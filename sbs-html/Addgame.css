@@ -1,0 +1,161 @@
+.box{
+    text-align: center;
+}
+#a1{
+    display: inline-block;
+    padding: 10px 57px; 
+    background-color: #e37012d3; 
+    color: #f9f6f6; 
+    text-decoration: none;
+    border-radius: 5px; 
+}
+#a2{
+    display: inline-block;
+    padding: 10px 47px; 
+    background-color:#e37012d3; 
+    color: #f9f6f6; 
+    text-decoration: none; 
+    border-radius: 5px; 
+}
+#a3{
+    display: inline-block; 
+    padding: 10px 30px; 
+    background-color: #e37012d3; 
+    color: #f9f6f6; 
+    text-decoration: none; 
+    border-radius: 5px; 
+}
+#a4{
+    display: inline-block; 
+    padding: 10px 20px; 
+    background-color: #e37012d3; 
+    color: #f9f6f6; 
+    text-decoration: none;
+    border-radius: 5px;
+}
+h1{
+    font-weight:900;
+    text-align: center;
+    color: #0d0d0d;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-image: url(https://th.bing.com/th/id/OIP.mAkM9FmW6jjPADqFKu9vhAHaHa?pid=ImgDet&rs=1);
+}
+.home{
+    text-align: center;
+    color: #614BC3;
+    margin-top: 10%;
+}
+#a5{
+    display: inline-block; 
+    padding: 10px 20px;
+    background-color: #94c3ef; 
+    color: #f9f6f6; 
+    text-decoration: none; 
+    border-radius: 5px; 
+}
+#a1:hover{
+    background-color:  #f0390f;
+}
+#a2:hover{
+    background-color: #f0390f;
+}
+#a3:hover{
+    background-color:#f0390f;
+}
+#a4:hover{
+    background-color: #f0390f;
+}
+#a5:hover{
+    background-color: #3e0bce;
+}
+p{
+    margin-top:45%;
+}
+@keyframes glow {
+    0% {
+        background-color:  #4D96FF; /* Start with your desired background color */
+        box-shadow: 0 0 5px 2px #4D96FF; /* Apply a shadow that matches the background color */
+    }
+    50% {
+        background-color: #FFC300; /* Change to a different color at the midpoint of the animation */
+        box-shadow: 0 0 20px 10px #FFC300; /* Increase the shadow size */
+    }
+    100% {
+        background-color:  #3e0bce; /* Return to the original color at the end of the animation */
+        box-shadow: 0 0 5px 2px #3e0bce; /* Reduce the shadow size */
+    }
+}
+/* Define the CSS rules for the glowing effect */
+/* Define the CSS rules for the <a> tag */
+#a5 {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #3e0bce;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Add a glowing effect on hover */
+#a5:hover {
+    background-color:  #3e0bce; /* Change the background color to a different color */
+    box-shadow: 0 0 10px  #3e0bce, 0 0 20px  #3e0bce, 0 0 30px #ff5733; /* Add a glowing shadow effect */
+}
+/* Define the CSS rules to create an outline for the <a> tag */
+#a1 {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #FFFFFF;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Add an outline to the background on hover */
+#a1:hover {
+    box-shadow: 0 0 0 3px #ff5733; /* Change the color and size of the outline */
+}
+#a2 {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #FFFFFF;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Add an outline to the background on hover */
+#a2:hover {
+    box-shadow: 0 0 0 3px #ff5733; /* Change the color and size of the outline */
+}
+#a3 {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #FFFFFF;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Add an outline to the background on hover */
+#a3:hover {
+    box-shadow: 0 0 0 3px #ff5733; /* Change the color and size of the outline */
+}
+#a4 {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #FFFFFF;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Add an outline to the background on hover */
+#a4:hover {
+    box-shadow: 0 0 0 3px #ff5733; /* Change the color and size of the outline */
+}
+
+
+
+
+

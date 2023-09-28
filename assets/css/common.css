@@ -24,7 +24,7 @@ body {
 .all-video{
     display: flex;
     justify-content: space-evenly;
-    flex-direction: row;
+    /* flex-direction: row; */
     flex-wrap: wrap;
     align-items: center;
     width: 80vw;
