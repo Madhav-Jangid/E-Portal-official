@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title>NGO</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/assets/css/templatemo-plot-listing.css">
+    <link rel="stylesheet" href="/assets/css/animated.css">
+    <link rel="stylesheet" href="/assets/css/owl.css">
+    <style>
+      /* Add your CSS styles here */
+      /* You can customize the styles as needed */
+      label {
+          font-weight: bold;
+      }
+      select {
+          width: 100%;
+          padding: 5px;
+          margin-top: 5px;
+      }
+      #foodDisplay {
+          display: none;
+          margin-top: 20px;
+      }
+      #foodList {
+          list-style-type: disc;
+          padding-left: 20px;
+      }
+
+  </style>
+
+
+
+</head>
+
+<body>
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="/Sub Html's/NGO.html" class="active">NGO</a></li>
+                            <li><a href="/Sub Html's/Soft skills.html">Soft Skills</a></li>
+                            <li><a href="/Sub Html's/Sports.html">Sports</a></li>
+                            <li><a href="/Sub Html's/Rights.html">Rights</a></li>
+                            <li><a href="/Sub Html's/Research.html">Research & Dev.</a></li>
+                            <li><a href="/Sub Html's/Health.html">Health</a></li>
+                            <li><a href="/Sub Html's/Education.html">Education</a></li>
+                            <li><a href="/Sub Html's/Banking.html">Banking</a></li>
+                            <li><a href="/Sub Html's/Agriculture.html">Agriculture</a></li>
+                            <li>
+                                <!-- <div class="main-white-button"><a href="https://e-gramsangam.000webhostapp.com/"><i class="fa fa-plus"></i>Chat Portal</a></div> -->
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+
+    <div class="main-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="top-text header-text">
+                        <h6 style="font-size: 20px;">Learn About</h6>
+                        <h2 style="font-size: 60px;">Non Government Oraganizations</h2>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <p style="color: rgb(255, 255, 255); font-size: 30px; font-weight: 400; text-align: center;">Welcome
+                        to our website dedicated to empowering rural communities through education! At our platform, we
+                        believe that learning should know no boundaries. We are here to bridge the gap and bring quality
+                        education to your doorstep. Explore a world of knowledge right from your home! We offer online
+                        courses that focus on essential soft skills, various languages, and a wide collection of
+                        e-books. Join us in your journey towards a brighter future. Start your learning adventure today!
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="recent-listing">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-heading">
+                <h2>Learn About</h2>
+                <h6>Explore Field in which you are Intrested</h6>
+              </div>
+            </div>
+            <div>
+              <label for="stateSelect">Select a State:</label>
+              <select id="stateSelect">
+                  <option value="">Select State</option>
+              </select>
+          </div>
+          <div>
+              <label for="citySelect">Select a City:</label>
+              <select id="citySelect" disabled>
+                  <option value="">Select City</option>
+              </select>
+          </div>
+          <div id="foodDisplay">
+              <h3>Details Of Non Govt. Organizations(NGO's)</h3>
+              <ul id="foodList">
+              </ul>
+          </div>
+      
+          <script>
+              const data = {
+                  "Punjab": ["Amritsar", "Chandigarh", "Ludhiana"],
+                  "Haryana": ["Gurgaon", "Faridabad", "Panchkula"],
+                  "Odisa": ["Bhubaneswar", "Koraput", "Cuttack"],
+                  "Bengal": ["Kolkata", "Siliguri", "Howrah"],
+                  "Kerala": ["Kochi", "Thiruvananathapuram", "Thrissur"],
+                  //"Gujarat": ["Ahmedabad", "Vadodara", "Gandhinagar"],
+                  //"Himachal Pradesh": ["", "", ""],
+                 // "Uttar Pradesh": ["", "", ""],
+                  //"Maharashtra": ["", "", ""],
+                
+                  // Add more states, cities, and foods as needed
+              };
+      
+              const stateSelect = document.getElementById("stateSelect");
+              const citySelect = document.getElementById("citySelect");
+              const foodDisplay = document.getElementById("foodDisplay");
+              const foodList = document.getElementById("foodList");
+      
+              function populateStates() {
+                  for (const state in data) {
+                      const option = document.createElement("option");
+                      option.value = state;
+                      option.textContent = state;
+                      stateSelect.appendChild(option);
+                  }
+              }
+      
+              function populateCities(selectedState) {
+                  citySelect.innerHTML = '<option value="">Select City</option>';
+                  
+                  if (selectedState in data) {
+                      const cities = data[selectedState];
+                      cities.forEach(city => {
+                          const option = document.createElement("option");
+                          option.value = city;
+                          option.textContent = city;
+                          citySelect.appendChild(option);
+                      });
+                      citySelect.removeAttribute("disabled");
+                  } else {
+                      citySelect.setAttribute("disabled", true);
+                  }
+              }
+      
+              function displayFamousFoods(selectedCity) {
+                  foodDisplay.style.display = "block";
+                  const foods = getFamousFoods(selectedCity); // Replace with your own function to fetch foods
+                  foodList.innerHTML = "";
+                  foods.forEach(food => {
+                      const li = document.createElement("li");
+                      li.textContent = food;
+                      foodList.appendChild(li);
+                  });
+              }
+      
+              stateSelect.addEventListener("change", () => {
+                  const selectedState = stateSelect.value;
+                  populateCities(selectedState);
+                  foodDisplay.style.display = "none";
+              });
+      
+              citySelect.addEventListener("change", () => {
+                  const selectedCity = citySelect.value;
+                  displayFamousFoods(selectedCity);
+              });
+      
+              function getFamousFoods(city) {
+                  // Replace with your data retrieval logic based on the selected city
+                  // For example, you can use an object or an API to fetch the famous foods
+                  // Here, we provide a sample list of foods
+                  const famousFoods = {
+                      "Amritsar": ["Pingalwara Charitable Society", "Society for promotion of Youth and Masses"],
+                      "Chandigarh": ["Sikh Human Development Foundation", "Acharyakul Chandigarh"],
+                      "Ludhiana": ["Nanhi Jaan", "HELPS Welfare Society"],
+                      // Add more cities as needed
+                      "Gurgaon": ["Uthaan","Sapno Ke Pankh"],
+                      "Faridabad": ["Bhagwan Mahaveer Viklang Sahayata Samiti (BMVSS)","Society for Promotion of Youth and Masses (SPYM)"],
+                      "Panchkula": ["Youthreach","Butterfly Nature club of India"],
+                      "Bhubaneswar":["HelpAge India","ChildFund India"],
+                      "Koraput":["Living Farms","Rural and Urban Development Action Society (RUDAS)"],
+                      "Cuttack":["Shree Kshetra Dharmasthala Rural Development Project (SKDRDP)","Centre for Youth and Social Development (CYSD)"],
+              "Kolkata":["Pratham","Mukti"],
+                      "Siliguri":["Uttar Banga Terai Unnayan Parishad (UBTUP)","Siliguri Welfare Organization (SWO)"],
+                      "Howrah":["Hope Foundation","Ramakrishna Mission"],		
+                      "Kochi":["Snehi","Mitra Jyothi"],
+                      "Thiruvananathapuram":["Kudumbashree","Pallium India"],
+                      "Thrissur":["Drishti Foundation Trust","Indira Bhavan"],
+               
+                  };
+      
+                  return famousFoods[city] || [];
+              }
+      
+              // Initial population of the state dropdown
+              populateStates();
+          </script>
+      <li style="text-align: center; padding-bottom: 3rem;"><a style="font-size: 30px; color: rgb(132, 134, 155); " href="/index.html">Home</a></li>
+
+ 
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="about">
+                <div class="logo">
+                  <img src="assets/images/black-logo.png" alt="Plot Listing Template">
+                </div>
+                <p>Your feedback is important to us. Whether you have a question, need assistance, or want to explore collaboration opportunities, we're here to help. Don't hesitate to reach out, and our dedicated team will get back to you promptly. Your satisfaction and engagement are at the heart of what we do.</p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="helpful-links">
+                <h4>Helpful Links</h4>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <ul>
+                      <li><a href="#">Categories</a></li>
+                      <li><a href="#">Reviews</a></li>
+                      <li><a href="#">Listing</a></li>
+                      <li><a href="#">Contact Us</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-6">
+                    <ul>
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#">Awards</a></li>
+                      <li><a href="#">Useful Sites</a></li>
+                      <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="contact-us">
+                <h4>Contact Us</h4>
+                <p>Baba Farid College of Engeneering And Technology , Deon (Dist: Bathinda) Punjab</p>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <a href="#">Phonenumber</a>
+                  </div>
+                  <div class="col-lg-6">
+                    <a href="#">Phonenumber</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="sub-footer">
+                <p>A Small Step To Do Something Meaningful
+                  <br>
+                  By Team: 
+                  <b style="color: #0ef;">Unstoppable Achievers 🚀</b>
+                  <!-- <p>Developed by: <b>Madhav Jangid</b><br>Content Provided by: <b>Manjot , Sania , Riya</b> <br>All over helpers: <b>Vansh Sethi, Rohit Makkar</b></p> -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+    <!-- Scripts -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/owl-carousel.js"></script>
+    <script src="/assets/js/animation.js"></script>
+    <script src="/assets/js/imagesloaded.js"></script>
+    <script src="/assets/js/custom.js"></script>
+</body>
+
+</html>
